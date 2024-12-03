@@ -1,0 +1,122 @@
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try simple thing first</title>
+    <style>
+          body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+        }
+        .login-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px; 
+        }
+
+        
+        .login-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 3px solid #1d0c0c;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        
+        .login-container input:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: 2px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        
+        .login-container button:hover {
+            background-color: #45a049; 
+        }
+
+        
+        .forgot-password {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .forgot-password a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body >
+    
+    <div style="width: 250px; height: 400px; background-color: aqua; text-shadow: 10px; border: 2px solid black;border-radius: 20px;">
+        <span style="margin-left: 100px; font-weight: bold;
+ font-size: larger;font-family: Georgia, 'Times New Roman', Times, serif;">Login form</span><br><br>
+
+ <form action="/login" method="POST" style="padding: 10px; ">
+    <input type="text" placeholder="Username" name="username" required style="border: 2px solid black; border-radius: 10px;"><br><br>
+    <input type="password" placeholder="Password" name="password" required style="border: 2px solid black; border-radius: 10px;"> <br> <br>
+    <button type="submit" id="myButton" style="border: 2px solid black; border-radius: 10px;">Login</button>
+</form>
+<div class="forgot-password">
+    <a href="#">Forgot password?</a> <br><br>
+    <p id="message" style="color: blue;" ></p>
+</div>
+</div>
+<script >
+ 
+
+ const button = document.getElementById('myButton');
+    const messageElement = document.getElementById('message');
+
+    button.addEventListener('click', function() {
+      messageElement.textContent = "THANKS FOR JOINING US!!!";
+    });
+   
+
+
+
+</script>
+
+
+
+</body>
+</html>
